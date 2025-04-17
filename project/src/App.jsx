@@ -7,7 +7,9 @@ import RiskAssessment from './pages/RiskAssessment';
 import ComplianceAudit from './pages/ComplianceAudit';
 import ITAudit from './pages/ITAudit';
 import Contact from './pages/Contact';
-import AboutUs from './pages/AboutUs'; // Add this import
+import AboutUs from './pages/AboutUs';
+import Careers from './pages/Career';
+import Services from './pages/Services';
 
 function App() {
   return (
@@ -15,12 +17,14 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about-us" element={<AboutUs />} /> {/* Add this route */}
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/services" element={<Services />} />
         <Route path="/internal-audit" element={<InternalAudit />} />
         <Route path="/risk-assessment" element={<RiskAssessment />} />
         <Route path="/compliance-audit" element={<ComplianceAudit />} />
         <Route path="/it-audit" element={<ITAudit />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
     </div>

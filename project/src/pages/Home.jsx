@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaChartLine, FaShieldAlt, FaSearchDollar, FaCogs, FaUserTie, FaChartBar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight } from 'react-icons/fa';
+import { FaChartLine, FaShieldAlt, FaSearchDollar, FaCogs, FaUserTie, FaChartBar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
 
 function Home() {
   const targetRef = useRef(null);
@@ -26,31 +26,31 @@ function Home() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slides = [
     {
-      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920",
+      image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?auto=format&fit=crop&q=80&w=1920",
       headline: "Strategic Audit Excellence",
       subheadline: "Transform your business with precision-driven audit solutions.",
       textPosition: "left",
     },
     {
-      image: "https://images.unsplash.com/photo-1553877522-43269d82fc8e?auto=format&fit=crop&q=80&w=1920",
+      image: "https://media.istockphoto.com/id/650191316/photo/business-people-meeting-with-technology.webp?a=1&b=1&s=612x612&w=0&k=20&c=W6KlgGKd9vEmAQ8aesuhQL-jc-Wd7Ecgq3FXkslFqJ8=",
       headline: "Empower Your Future",
       subheadline: "Drive growth with our cutting-edge audit expertise.",
       textPosition: "right",
     },
     {
-      image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1920",
+      image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=1920",
       headline: "Unmatched Audit Precision",
       subheadline: "Secure your success with tailored compliance strategies.",
-      textPosition: "left",
+      textPosition: "center",
     },
     {
-      image: "https://images.unsplash.com/photo-1552664730-d307ca884978?auto=format&fit=crop&q=80&w=1920",
+      image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=1920",
       headline: "Innovate with Confidence",
       subheadline: "Leverage our expertise for seamless audit processes.",
       textPosition: "right",
     },
     {
-      image: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?auto=format&fit=crop&q=80&w=1920",
+      image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920",
       headline: "Lead with Assurance",
       subheadline: "Partner with us for world-class audit solutions.",
       textPosition: "left",
@@ -75,32 +75,32 @@ function Home() {
 
   const services = [
     {
-      icon: <FaChartLine className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaChartLine className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Internal Audit",
       description: "Comprehensive internal audit solutions tailored to your business needs with advanced risk assessment methodologies."
     },
     {
-      icon: <FaShieldAlt className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaShieldAlt className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Risk Assessment",
       description: "Identifying and analyzing potential risks to safeguard your assets and ensure business continuity."
     },
     {
-      icon: <FaSearchDollar className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaSearchDollar className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Fraud Detection",
       description: "Advanced fraud detection and prevention strategies to protect your organization's assets."
     },
     {
-      icon: <FaCogs className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaCogs className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Process Evaluation",
       description: "Streamlining operations and enhancing efficiency through detailed process analysis."
     },
     {
-      icon: <FaUserTie className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaUserTie className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Compliance Audits",
       description: "Ensuring adherence to regulatory standards and corporate policies across all operations."
     },
     {
-      icon: <FaChartBar className="text-5xl text-primary group-hover:text-white transition-colors duration-300" />,
+      icon: <FaChartBar className="text-5xl text-blue-600 group-hover:text-white transition-colors duration-300" />,
       title: "Performance Audits",
       description: "Evaluating effectiveness and efficiency of business operations and processes."
     }
@@ -113,17 +113,38 @@ function Home() {
     { name: "Real Estate", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=500" }
   ];
 
+  const socialLinks = [
+    {
+      icon: <FaPhone className="text-4xl text-blue-600" />,
+      title: "Call Us",
+      href: "tel:+971589716588",
+    },
+    {
+      icon: <FaWhatsapp className="text-4xl text-blue-600" />,
+      title: "WhatsApp",
+      href: "https://wa.me/+971589716588",
+    },
+    {
+      icon: <FaEnvelope className="text-4xl text-blue-600" />,
+      title: "Email",
+      href: "mailto:emiratesauditgroup@gmail.com",
+    },
+    {
+      icon: <FaLinkedin className="text-4xl text-blue-600" />,
+      title: "LinkedIn",
+      href: "https://www.linkedin.com/company/emirates-audit-group", // Placeholder; replace with actual LinkedIn URL
+    },
+  ];
+
   // Text position styles
   const textPositionStyles = {
     left: "text-left items-start pl-4 sm:pl-8 md:pl-12 lg:pl-16",
     right: "text-right items-end pr-4 sm:pr-8 md:pr-12 lg:pr-16",
+    center: "text-center items-center px-4 sm:px-8 md:px-12 lg:px-16",
   };
 
   return (
     <div className="min-h-screen bg-white font-['Inter',sans-serif]">
-      {/* Google Fonts */}
-      <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap" rel="stylesheet" />
-
       {/* Hero Section */}
       <section ref={targetRef} id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
         {/* Background Image Carousel */}
@@ -146,8 +167,8 @@ function Home() {
               )}
             </AnimatePresence>
           ))}
-          <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-accent/80 mix-blend-overlay"></div>
-          <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent pointer-events-none"></div> {/* Vignette */}
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-blue-400/80 mix-blend-overlay"></div>
+          <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent pointer-events-none"></div>
           {/* Particle Effect */}
           <div className="absolute inset-0 pointer-events-none">
             <div className="particle particle-1"></div>
@@ -162,9 +183,9 @@ function Home() {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentSlide}
-              initial={{ opacity: 0, x: slides[currentSlide].textPosition === 'left' ? -150 : 150 }}
+              initial={{ opacity: 0, x: slides[currentSlide].textPosition === 'left' ? -150 : slides[currentSlide].textPosition === 'right' ? 150 : 0 }}
               animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: slides[currentSlide].textPosition === 'left' ? 150 : -150 }}
+              exit={{ opacity: 0, x: slides[currentSlide].textPosition === 'left' ? 150 : slides[currentSlide].textPosition === 'right' ? -150 : 0 }}
               transition={{ duration: 1, type: "spring", stiffness: 80 }}
               className={`space-y-6 flex flex-col ${textPositionStyles[slides[currentSlide].textPosition]} max-w-lg`}
             >
@@ -187,7 +208,7 @@ function Home() {
                   whileTap={{ scale: 0.95 }}
                   animate={{ boxShadow: ["0px 0px 0px rgba(255,255,255,0)", "0px 0px 20px rgba(255,255,255,0.4)", "0px 0px 0px rgba(255,255,255,0)"] }}
                   transition={{ boxShadow: { duration: 2, repeat: Infinity }, scale: { duration: 0.3 } }}
-                  className="bg-white text-primary px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-gray-100 shadow-2xl"
+                  className="bg-white text-blue-600 px-8 py-3 rounded-full text-lg font-semibold transition-all duration-300 hover:bg-gray-100 shadow-2xl"
                 >
                   Explore Our Services
                 </motion.button>
@@ -234,7 +255,7 @@ function Home() {
                 <motion.div 
                   initial={{ opacity: 0 }}
                   whileInView={{ opacity: 1 }}
-                  className="absolute inset-0 bg-gradient-to-r from-primary/20 to-accent/20 backdrop-blur-sm"
+                  className="absolute inset-0 bg-gradient-to-r from-blue-600/20 to-blue-400/20 backdrop-blur-sm"
                 />
               </motion.div>
             </Tilt>
@@ -246,7 +267,7 @@ function Home() {
               transition={{ duration: 1 }}
               className="space-y-8"
             >
-              <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
                 Excellence in Internal Audit Services
               </h2>
               <p className="text-gray-600 text-xl leading-relaxed">
@@ -258,7 +279,7 @@ function Home() {
                     end={500}
                     suffix="+"
                     duration={2.5}
-                    className="text-4xl font-bold text-primary"
+                    className="text-4xl font-bold text-blue-600"
                   />
                   <div className="text-gray-600 mt-2">Clients Served</div>
                 </Tilt>
@@ -267,7 +288,7 @@ function Home() {
                     end={98}
                     suffix="%"
                     duration={2.5}
-                    className="text-4xl font-bold text-primary"
+                    className="text-4xl font-bold text-blue-600"
                   />
                   <div className="text-gray-600 mt-2">Client Satisfaction</div>
                 </Tilt>
@@ -287,7 +308,7 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
               Our Core Services
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -303,7 +324,7 @@ function Home() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.5, delay: index * 0.1 }}
-                  className="group bg-white p-8 rounded-xl shadow-lg hover:bg-gradient-to-br hover:from-primary hover:to-accent transition-all duration-500 hover:scale-105 cursor-pointer card-glow"
+                  className="group bg-white p-8 rounded-xl shadow-lg hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-400 transition-all duration-500 hover:scale-105 cursor-pointer card-glow"
                 >
                   <motion.div 
                     className="mb-6"
@@ -312,7 +333,7 @@ function Home() {
                   >
                     {service.icon}
                   </motion.div>
-                  <h3 className="text-2xl font-semibold text-primary group-hover:text-white mb-4 transition-colors duration-300">
+                  <h3 className="text-2xl font-semibold text-blue-600 group-hover:text-white mb-4 transition-colors duration-300">
                     {service.title}
                   </h3>
                   <p className="text-gray-600 group-hover:text-white/90 transition-colors duration-300">
@@ -335,7 +356,7 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
               Industries We Serve
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -365,7 +386,7 @@ function Home() {
                     />
                   </motion.div>
                   <motion.div 
-                    className="absolute inset-0 bg-gradient-to-t from-primary/90 to-transparent flex items-end p-6"
+                    className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-transparent flex items-end p-6"
                     initial={{ opacity: 0 }}
                     whileHover={{ opacity: 1 }}
                     transition={{ duration: 0.3 }}
@@ -389,7 +410,7 @@ function Home() {
             transition={{ duration: 0.8 }}
             className="text-center mb-16"
           >
-            <h2 className="text-5xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">
+            <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
               Get In Touch
             </h2>
             <p className="text-2xl text-gray-600 max-w-3xl mx-auto">
@@ -406,27 +427,34 @@ function Home() {
                 transition={{ duration: 0.8 }}
                 className="bg-white p-8 rounded-xl shadow-lg card-glow"
               >
-                <form className="space-y-6">
-                  <motion.div whileHover={{ scale: 1.02 }}>
-                    <label className="block text-gray-700 mb-2">Name</label>
-                    <input type="text" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" />
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.02 }}>
-                    <label className="block text-gray-700 mb-2">Email</label>
-                    <input type="email" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300" />
-                  </motion.div>
-                  <motion.div whileHover={{ scale: 1.02 }}>
-                    <label className="block text-gray-700 mb-2">Message</label>
-                    <textarea rows="4" className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-primary focus:border-transparent transition-all duration-300"></textarea>
-                  </motion.div>
-                  <motion.button
-                    whileHover={{ scale: 1.05 }}
-                    whileTap={{ scale: 0.95 }}
-                    className="w-full bg-gradient-to-r from-primary to-accent text-white py-3 rounded-lg font-semibold transition-all duration-300 transform hover:shadow-xl"
-                  >
-                    Send Message
-                  </motion.button>
-                </form>
+                <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
+                  Connect With Us
+                </h3>
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                  {socialLinks.map((link, index) => (
+                    <motion.div
+                      key={link.title}
+                      initial={{ opacity: 0, y: 20 }}
+                      whileInView={{ opacity: 1, y: 0 }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5, delay: index * 0.1 }}
+                      className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
+                    >
+                      <a href={link.href} target="_blank" rel="noopener noreferrer">
+                        <div className="flex flex-col items-center text-center">
+                          <motion.div
+                            whileHover={{ scale: 1.1 }}
+                            transition={{ duration: 0.3 }}
+                            className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-4"
+                          >
+                            {link.icon}
+                          </motion.div>
+                          <h4 className="text-lg font-semibold text-blue-600">{link.title}</h4>
+                        </div>
+                      </a>
+                    </motion.div>
+                  ))}
+                </div>
               </motion.div>
             </Tilt>
 
@@ -438,16 +466,16 @@ function Home() {
                 transition={{ duration: 0.8 }}
                 className="relative"
               >
-                <div className="absolute inset-0 bg-gradient-to-br from-primary/10 to-accent/10 rounded-xl"></div>
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-600/10 to-blue-400/10 rounded-xl"></div>
                 <div className="relative bg-white p-8 rounded-xl shadow-lg transform -translate-y-4 -translate-x-4 card-glow">
-                  <h3 className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent mb-6">Our Office</h3>
+                  <h3 className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">Our Office</h3>
                   <div className="space-y-6">
                     <motion.div 
                       className="flex items-start space-x-4 hover-lift"
                       whileHover={{ x: 10 }}
                     >
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                        <FaMapMarkerAlt className="text-primary" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600/10 to-blue-400/10 flex items-center justify-center">
+                        <FaMapMarkerAlt className="text-blue-600" />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Address</h4>
@@ -455,27 +483,27 @@ function Home() {
                       </div>
                     </motion.div>
                     <motion.div 
-                      className="flex items-start space-x-4  hover-lift"
+                      className="flex items-start space-x-4 hover-lift"
                       whileHover={{ x: 10 }}
                     >
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                        <FaPhone className="text-primary" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600/10 to-blue-400/10 flex items-center justify-center">
+                        <FaPhone className="text-blue-600" />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Phone</h4>
-                        <p className="text-gray-600">+971 527724155</p>
+                        <p className="text-gray-600">+971 589716588</p>
                       </div>
                     </motion.div>
                     <motion.div 
                       className="flex items-start space-x-4 hover-lift"
                       whileHover={{ x: 10 }}
                     >
-                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-primary/10 to-accent/10 flex items-center justify-center">
-                        <FaEnvelope className="text-primary" />
+                      <div className="w-10 h-10 rounded-full bg-gradient-to-br from-blue-600/10 to-blue-400/10 flex items-center justify-center">
+                        <FaEnvelope className="text-blue-600" />
                       </div>
                       <div>
                         <h4 className="font-semibold mb-1">Email</h4>
-                        <p className="text-gray-600">contact@emiratesaudit.com</p>
+                        <p className="text-gray-600">emiratesauditgroup@gmail.com</p>
                       </div>
                     </motion.div>
                   </div>
@@ -525,6 +553,30 @@ function Home() {
         @keyframes float {
           0%, 100% { transform: translateY(0); opacity: 0.4; }
           50% { transform: translateY(-60px); opacity: 0.7; }
+        }
+        .card-glow {
+          position: relative;
+          overflow: hidden;
+        }
+        .card-glow::before {
+          content: '';
+          position: absolute;
+          top: -50%;
+          left: -50%;
+          width: 200%;
+          height: 200%;
+          background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, rgba(255,255,255,0) 70%);
+          transform: rotate(45deg);
+          transition: all 0.5s;
+          opacity: 0;
+        }
+        .card-glow:hover::before {
+          opacity: 1;
+          transform: rotate(45deg) translate(20%, 20%);
+        }
+        .hover-lift:hover {
+          transform: translateY(-5px);
+          transition: transform 0.3s ease;
         }
       `}</style>
     </div>
