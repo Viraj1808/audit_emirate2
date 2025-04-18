@@ -21,9 +21,9 @@ const Navbar = () => {
     { name: 'Home', href: '/' },
     { name: 'About Us', href: '/about-us' },
     { name: 'Careers', href: '/careers' },
-    { name: 'service', href: '/services' },
     {
       name: 'Services',
+      href: '/services',
       subItems: [
         { name: 'Internal Audit', href: '/internal-audit' },
         { name: 'Risk Assessment', href: '/risk-assessment' },
@@ -63,6 +63,12 @@ const Navbar = () => {
     },
   };
 
+  const handleNavClick = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    setIsOpen(false); // Close mobile menu if open
+    setIsServicesOpen(false); // Close services dropdown if open
+  };
+
   return (
     <motion.nav
       initial={{ y: -100 }}
@@ -83,6 +89,7 @@ const Navbar = () => {
             <Link
               to="/"
               className="text-2xl font-bold text-gray-900 hover:text-indigo-600 transition-colors duration-300"
+              onClick={handleNavClick}
             >
               Emirates Audit Group
             </Link>
@@ -104,12 +111,14 @@ const Navbar = () => {
                       onMouseEnter={() => setIsServicesOpen(true)}
                       onMouseLeave={() => setIsServicesOpen(false)}
                     >
-                      <button
+                      <Link
+                        to={item.href}
                         className={`text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all duration-300 flex items-center group ${
-                          item.subItems.some((sub) => sub.href === location.pathname)
+                          location.pathname === item.href || item.subItems.some((sub) => sub.href === location.pathname)
                             ? 'text-indigo-600'
                             : ''
                         }`}
+                        onClick={handleNavClick}
                       >
                         {item.name}
                         <FaChevronDown
@@ -117,7 +126,7 @@ const Navbar = () => {
                             isServicesOpen ? 'rotate-180' : ''
                           }`}
                         />
-                      </button>
+                      </Link>
                       <AnimatePresence>
                         {isServicesOpen && (
                           <motion.div
@@ -136,7 +145,7 @@ const Navbar = () => {
                                       ? 'text-indigo-600 bg-indigo-50'
                                       : ''
                                   }`}
-                                  onClick={() => setIsServicesOpen(false)}
+                                  onClick={handleNavClick}
                                 >
                                   {subItem.name}
                                 </Link>
@@ -152,6 +161,7 @@ const Navbar = () => {
                       className={`relative text-gray-700 hover:text-indigo-600 px-3 py-2 text-sm font-medium transition-all duration-300 group ${
                         location.pathname === item.href ? 'text-indigo-600' : ''
                       }`}
+                      onClick={handleNavClick}
                     >
                       {item.name}
                       <span
@@ -233,10 +243,7 @@ const Navbar = () => {
                                       ? 'text-indigo-600 bg-indigo-50'
                                       : ''
                                   }`}
-                                  onClick={() => {
-                                    setIsOpen(false);
-                                    setIsServicesOpen(false);
-                                  }}
+                                  onClick={handleNavClick}
                                 >
                                   {subItem.name}
                                 </Link>
@@ -251,7 +258,7 @@ const Navbar = () => {
                         className={`block text-gray-700 hover:text-indigo-600 hover:bg-indigo-50 px-3 py-2 rounded-md text-base font-medium transition-all duration-300 ${
                           location.pathname === item.href ? 'text-indigo-600 bg-indigo-50' : ''
                         }`}
-                        onClick={() => setIsOpen(false)}
+                        onClick={handleNavClick}
                       >
                         {item.name}
                       </Link>

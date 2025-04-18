@@ -5,7 +5,7 @@ import Tilt from 'react-parallax-tilt';
 import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaChartLine, FaShieldAlt, FaSearchDollar, FaCogs, FaUserTie, FaChartBar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, FaWhatsapp, FaLinkedin } from 'react-icons/fa';
+import { FaChartLine, FaShieldAlt, FaSearchDollar, FaCogs, FaUserTie, FaChartBar, FaMapMarkerAlt, FaPhone, FaEnvelope, FaArrowRight, FaWhatsapp } from 'react-icons/fa';
 
 function Home() {
   const targetRef = useRef(null);
@@ -107,32 +107,42 @@ function Home() {
   ];
 
   const industries = [
-    { name: "Financial Services", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=500" },
-    { name: "Healthcare", image: "https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&q=80&w=500" },
-    { name: "Technology", image: "https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&q=80&w=500" },
-    { name: "Real Estate", image: "https://images.unsplash.com/photo-1560518883-ce09059eeffa?auto=format&fit=crop&q=80&w=500" }
+    { name: "Financial Services", image: "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=500" }, // Updated to audit-related image
+    { name: "Healthcare", image: "https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=500" }, // Updated to audit-related image
+    { name: "Technology", image: "https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=500" }, // Updated to audit-related image
+    { name: "Real Estate", image: "https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&q=80&w=500" } // Updated to audit-related image
   ];
 
   const socialLinks = [
     {
-      icon: <FaPhone className="text-4xl text-blue-600" />,
+      icon: (
+        <FaPhone className="w-8 h-8" style={{ color: '#14B8A6' }} />
+      ),
       title: "Call Us",
       href: "tel:+971589716588",
     },
     {
-      icon: <FaWhatsapp className="text-4xl text-blue-600" />,
+      icon: (
+        <FaWhatsapp className="w-8 h-8" style={{ color: '#25D366' }} />
+      ),
       title: "WhatsApp",
       href: "https://wa.me/+971589716588",
     },
     {
-      icon: <FaEnvelope className="text-4xl text-blue-600" />,
+      icon: (
+        <FaEnvelope className="w-8 h-8" style={{ color: '#EF4444' }} />
+      ),
       title: "Email",
       href: "mailto:emiratesauditgroup@gmail.com",
     },
     {
-      icon: <FaLinkedin className="text-4xl text-blue-600" />,
+      icon: (
+        <svg className="w-8 h-8" viewBox="0 0 24 24" fill="#0A66C2">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.327-.024-3.037-1.852-3.037-1.852 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.048c.476-.9 1.637-1.852 3.369-1.852 3.605 0 4.269 2.371 4.269 5.455v6.288zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.919-2.063 2.063-2.063 1.139 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      ),
       title: "LinkedIn",
-      href: "https://www.linkedin.com/company/emirates-audit-group", // Placeholder; replace with actual LinkedIn URL
+      href: "https://www.linkedin.com/company/emirates-audit-group",
     },
   ];
 
@@ -419,7 +429,7 @@ function Home() {
           </motion.div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-16">
-            <Tilt>
+            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
               <motion.div
                 initial={{ opacity: 0, x: -50 }}
                 whileInView={{ opacity: 1, x: 0 }}
@@ -440,7 +450,7 @@ function Home() {
                       transition={{ duration: 0.5, delay: index * 0.1 }}
                       className="bg-white p-6 rounded-xl shadow-md hover:shadow-xl transition-all duration-300"
                     >
-                      <a href={link.href} target="_blank" rel="noopener noreferrer">
+                      <a href={link.href} target="_blank" rel="noopener noreferrer" aria-label={`Connect via ${link.title}`}>
                         <div className="flex flex-col items-center text-center">
                           <motion.div
                             whileHover={{ scale: 1.1 }}
@@ -458,7 +468,7 @@ function Home() {
               </motion.div>
             </Tilt>
 
-            <Tilt>
+            <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5}>
               <motion.div
                 initial={{ opacity: 0, x: 50 }}
                 whileInView={{ opacity: 1, x: 0 }}
