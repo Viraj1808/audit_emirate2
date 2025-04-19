@@ -101,11 +101,19 @@ const AboutUs = () => {
               Managing Partner & Co-Founder
             </p>
             <div className="space-y-4 text-gray-600 text-lg md:text-xl flex-grow">
-              <p><strong>Role:</strong> Chartered Accountant | Audit Strategist | Financial Compliance Architect</p>
-              <p><strong>Experience:</strong> Mounil Shah stands at the helm of our firm as the Managing Partner and Co-Founder, bringing deep expertise in internal audits, risk management, financial operations, and regulatory compliance. With over a decade of experience across global and regional markets, Mounil has led high-impact audit programs and crafted financial control frameworks that have transformed the internal landscapes of major organizations.</p>
-              <p><strong>Achievements:</strong> As a Chartered Accountant with rich experience in banking, real estate, retail, and manufacturing sectors, Mounil is known for his sharp analytical thinking and data-driven audit leadership. His ability to decode complex financial structures and design robust audit strategies has earned him the trust of senior stakeholders and boardrooms alike.</p>
-              <p><strong>Expertise:</strong> Mounil’s professional journey has been marked by delivering compliance excellence, building high-performing audit teams, and pioneering digital audit transformations. His leadership extends beyond process improvement—he is the strategic mind behind our firm’s audit methodology, client engagement model, and operational rigor.</p>
-              <p><strong>Leadership:</strong> A master of both detail and vision, Mounil ensures that every engagement is backed by insight, precision, and impact. His strategic foresight, deep domain knowledge, and ethical governance define the very foundation of our firm’s values and success.</p>
+              <ul className="list-disc pl-5">
+                <li>Stands at the helm of our firm as the Managing Partner and Co-Founder.</li>
+                <li>Brings deep expertise in internal audits, risk management, financial operations, and regulatory compliance.</li>
+                <li>Has over a decade of experience across global and regional markets.</li>
+                <li>Has led high-impact audit programs and crafted financial control frameworks that transformed major organizations.</li>
+                <li>Chartered Accountant with rich experience in banking, real estate, retail, and manufacturing sectors.</li>
+                <li>Known for sharp analytical thinking and data-driven audit leadership.</li>
+                <li>Able to decode complex financial structures and design robust audit strategies, earning trust from senior stakeholders and boardrooms.</li>
+                <li>Professional journey marked by delivering compliance excellence, building high-performing audit teams, and pioneering digital audit transformations.</li>
+                <li>Strategic mind behind our firm’s audit methodology, client engagement model, and operational rigor.</li>
+                <li>Ensures every engagement is backed by insight, precision, and impact.</li>
+                <li>Strategic foresight, deep domain knowledge, and ethical governance define the foundation of our firm’s values and success.</li>
+              </ul>
             </div>
             <a
               href="https://www.linkedin.com/in/mounil-shah/"
@@ -132,10 +140,17 @@ const AboutUs = () => {
               Director & Co-Founder
             </p>
             <div className="space-y-4 text-gray-600 text-lg md:text-xl flex-grow">
-              <p><strong>Role:</strong> Strategic Visionary | Sales & Operations Expert | Financial Growth Catalyst</p>
-              <p><strong>Experience:</strong> Biijal Shah brings over a decade of leadership experience in Sales, Operations, and Strategic Marketing, backed by academic credentials in Commerce and Strategic Management. Based in Dubai, she has consistently delivered measurable growth across industries—leading successful market entries, securing high-value deals, and implementing scalable financial strategies.</p>
-              <p><strong>Achievements:</strong> Her experience spans the introduction of innovative SaaS and digital solutions, revenue optimization, and client engagement across complex projects. With a keen focus on negotiation, investor management, and business expansion, Biijal has driven financial results that speak for themselves.</p>
-              <p><strong>Expertise:</strong> As Co-Founder of our internal audit and consulting firm, she brings a rare combination of financial insight and operational clarity. Her ability to align business goals with sustainable financial practices makes her a trusted partner in helping clients strengthen compliance, streamline audits, and accelerate growth.</p>
+              <ul className="list-disc pl-5">
+                <li>Brings over a decade of leadership experience in Sales, Operations, and Strategic Marketing.</li>
+                <li>Backed by academic credentials in Commerce and Strategic Management.</li>
+                <li>Based in Dubai, consistently delivers measurable growth across industries.</li>
+                <li>Leads successful market entries, secures high-value deals, and implements scalable financial strategies.</li>
+                <li>Experience spans the introduction of innovative SaaS and digital solutions, revenue optimization, and client engagement across complex projects.</li>
+                <li>Focuses on negotiation, investor management, and business expansion, driving financial results.</li>
+                <li>As Co-Founder, brings a rare combination of financial insight and operational clarity to our internal audit and consulting firm.</li>
+                <li>Aligns business goals with sustainable financial practices.</li>
+                <li>Serves as a trusted partner in helping clients strengthen compliance, streamline audits, and accelerate growth.</li>
+              </ul>
             </div>
             <a
               href="https://www.linkedin.com/in/biijal-shah/"
