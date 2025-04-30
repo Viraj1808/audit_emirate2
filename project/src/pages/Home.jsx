@@ -1,5 +1,4 @@
-import React from 'react';
-import { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { motion, useScroll, useTransform, AnimatePresence } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import Tilt from 'react-parallax-tilt';
@@ -7,10 +6,8 @@ import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { FaChartLine, FaShieldAlt, FaSearchDollar, FaCogs, FaUserTie, FaChartBar, FaMapMarkerAlt, FaArrowRight } from 'react-icons/fa';
-import { FaWhatsapp } from 'react-icons/fa';
-import { FaEnvelope } from 'react-icons/fa';
-import { FaPhone } from 'react-icons/fa';
-import { FaLinkedin } from 'react-icons/fa';
+import { FaWhatsapp, FaEnvelope, FaPhone, FaLinkedin } from 'react-icons/fa';
+import AboutUs from './AboutUs'; // Import AboutUs component
 
 // Error Boundary Component
 class ErrorBoundary extends React.Component {
@@ -197,7 +194,6 @@ function Home() {
 
         {/* Hero Section */}
         <section ref={targetRef} id="home" className="min-h-screen relative flex items-center justify-center overflow-hidden">
-          {/* Background Image Carousel */}
           <motion.div
             style={{ opacity, scale }}
             className="absolute inset-0 w-full h-full"
@@ -219,7 +215,6 @@ function Home() {
             ))}
             <div className="absolute inset-0 bg-gradient-to-br from-blue-600/80 to-blue-400/80 mix-blend-overlay"></div>
             <div className="absolute inset-0 bg-gradient-to-br from-black/30 to-transparent pointer-events-none"></div>
-            {/* Particle Effect */}
             <div className="absolute inset-0 pointer-events-none">
               <div className="particle particle-1"></div>
               <div className="particle particle-2"></div>
@@ -228,7 +223,6 @@ function Home() {
             </div>
           </motion.div>
 
-          {/* Content */}
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex items-center h-full">
             <AnimatePresence mode="wait">
               <motion.div
@@ -267,7 +261,6 @@ function Home() {
             </AnimatePresence>
           </div>
 
-          {/* Scroll Indicator */}
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
@@ -323,16 +316,7 @@ function Home() {
                 <p className="text-gray-600 text-xl leading-relaxed">
                   Emirates Audit Group is a premier provider of internal audit services based in Dubai, UAE. Our team of highly skilled professionals combines deep industry knowledge with cutting-edge methodologies to provide tailored audit solutions.
                 </p>
-                <div className="grid grid-cols-2 gap-6">
-                  <Tilt className="card-hover-effect bg-gradient-to-br from-white to-blue-50 p-6 rounded-lg">
-                    <CountUp
-                      end={500}
-                      suffix="+"
-                      duration={2.5}
-                      className="text-4xl font-bold text-blue-600"
-                    />
-                    <div className="text-gray-600 mt-2">Clients Served</div>
-                  </Tilt>
+                <div className="grid grid-cols-1 gap-6">
                   <Tilt className="card-hover-effect bg-gradient-to-br from-white to-blue-50 p-6 rounded-lg">
                     <CountUp
                       end={98}
@@ -435,19 +419,21 @@ function Home() {
                         className="w-full h-[250px] object-cover"
                       />
                     </motion.div>
-                    <motion.div 
+                    <div 
                       className="absolute inset-0 bg-gradient-to-t from-blue-600/90 to-transparent flex items-end p-6"
-                      initial={{ opacity: 0 }}
-                      whileHover={{ opacity: 1 }}
-                      transition={{ duration: 0.3 }}
                     >
                       <h3 className="text-xl font-semibold text-white">{industry.name}</h3>
-                    </motion.div>
+                    </div>
                   </motion.div>
                 </Tilt>
               ))}
             </div>
           </div>
+        </section>
+
+        {/* About Us Section */}
+        <section id="about-us" className="py-32 bg-gray-50">
+          <AboutUs />
         </section>
 
         {/* Contact Section */}

@@ -28,25 +28,6 @@ const AboutUs = () => {
       variants={containerVariants}
       className="min-h-screen bg-gray-50 text-gray-900 pt-24 pb-12 font-sans"
     >
-      {/* Hero Section */}
-      <section className="relative bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-28 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-200/30 to-indigo-200/30"></div>
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
-          <motion.h1
-            variants={itemVariants}
-            className="text-5xl md:text-7xl font-extrabold mb-6 tracking-tight drop-shadow-lg"
-          >
-            About Emirates Audit Group
-          </motion.h1>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl max-w-4xl mx-auto font-light leading-relaxed"
-          >
-            Pioneering the future of internal audit with innovative solutions, advanced technology, and a client-first mindset.
-          </motion.p>
-        </div>
-      </section>
-
       {/* About Content */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
@@ -101,19 +82,18 @@ const AboutUs = () => {
               Managing Partner & Co-Founder
             </p>
             <div className="space-y-4 text-gray-600 text-lg md:text-xl flex-grow">
-              <ul className="list-disc pl-5">
-                <li>Stands at the helm of our firm as the Managing Partner and Co-Founder.</li>
-                <li>Brings deep expertise in internal audits, risk management, financial operations, and regulatory compliance.</li>
-                <li>Has over a decade of experience across global and regional markets.</li>
-                <li>Has led high-impact audit programs and crafted financial control frameworks that transformed major organizations.</li>
-                <li>Chartered Accountant with rich experience in banking, real estate, retail, and manufacturing sectors.</li>
-                <li>Known for sharp analytical thinking and data-driven audit leadership.</li>
-                <li>Able to decode complex financial structures and design robust audit strategies, earning trust from senior stakeholders and boardrooms.</li>
-                <li>Professional journey marked by delivering compliance excellence, building high-performing audit teams, and pioneering digital audit transformations.</li>
-                <li>Strategic mind behind our firm’s audit methodology, client engagement model, and operational rigor.</li>
-                <li>Ensures every engagement is backed by insight, precision, and impact.</li>
-                <li>Strategic foresight, deep domain knowledge, and ethical governance define the foundation of our firm’s values and success.</li>
-              </ul>
+              <p>
+                Mounil Shah stands at the helm of our firm as the Managing Partner and Co-Founder, bringing deep expertise in internal audits, risk management, financial operations, and regulatory compliance. With over a decade of experience across global and regional markets, Mounil has led high-impact audit programs and crafted financial control frameworks that have transformed the internal landscapes of major organizations.
+              </p>
+              <p>
+                As a Chartered Accountant with rich experience in banking, real estate, retail, and manufacturing sectors, Mounil is known for his sharp analytical thinking and data-driven audit leadership. His ability to decode complex financial structures and design robust audit strategies has earned him the trust of senior stakeholders and boardrooms alike.
+              </p>
+              <p>
+                Mounil’s professional journey has been marked by delivering compliance excellence, building high-performing audit teams, and pioneering digital audit transformations. His leadership extends beyond process improvement—he is the strategic mind behind our firm’s audit methodology, client engagement model, and operational rigor.
+              </p>
+              <p>
+                A master of both detail and vision, Mounil ensures that every engagement is backed by insight, precision, and impact. His strategic foresight, deep domain knowledge, and ethical governance define the very foundation of our firm’s values and success.
+              </p>
             </div>
             <a
               href="https://www.linkedin.com/in/mounil-shah/"
@@ -140,17 +120,15 @@ const AboutUs = () => {
               Director & Co-Founder
             </p>
             <div className="space-y-4 text-gray-600 text-lg md:text-xl flex-grow">
-              <ul className="list-disc pl-5">
-                <li>Brings over a decade of leadership experience in Sales, Operations, and Strategic Marketing.</li>
-                <li>Backed by academic credentials in Commerce and Strategic Management.</li>
-                <li>Based in Dubai, consistently delivers measurable growth across industries.</li>
-                <li>Leads successful market entries, secures high-value deals, and implements scalable financial strategies.</li>
-                <li>Experience spans the introduction of innovative SaaS and digital solutions, revenue optimization, and client engagement across complex projects.</li>
-                <li>Focuses on negotiation, investor management, and business expansion, driving financial results.</li>
-                <li>As Co-Founder, brings a rare combination of financial insight and operational clarity to our internal audit and consulting firm.</li>
-                <li>Aligns business goals with sustainable financial practices.</li>
-                <li>Serves as a trusted partner in helping clients strengthen compliance, streamline audits, and accelerate growth.</li>
-              </ul>
+              <p>
+                Biijal Shah brings over a decade of leadership experience in Sales, Operations, and Strategic Marketing, backed by academic credentials in Commerce and Strategic Management. Based in Dubai, she has consistently delivered measurable growth across industries—leading successful market entries, securing high-value deals, and implementing scalable financial strategies.
+              </p>
+              <p>
+                Her experience spans the introduction of innovative SaaS and digital solutions, revenue optimization, and client engagement across complex projects. With a keen focus on negotiation, investor management, and business expansion, Biijal has driven financial results that speak for themselves.
+              </p>
+              <p>
+                As Co-Founder of our internal audit and consulting firm, she brings a rare combination of financial insight and operational clarity. Her ability to align business goals with sustainable financial practices makes her a trusted partner in helping clients strengthen compliance, streamline audits, and accelerate growth.
+              </p>
             </div>
             <a
               href="https://www.linkedin.com/in/biijal-shah/"
@@ -290,32 +268,6 @@ const AboutUs = () => {
             <p className="text-gray-600 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed">
               To lead the global audit industry as a beacon of innovation, delivering futuristic solutions that empower businesses to navigate complexity with confidence and clarity.
             </p>
-          </motion.div>
-        </div>
-      </section>
-
-      {/* Call to Action */}
-      <section className="bg-gradient-to-r from-blue-600 to-indigo-700 text-white py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <motion.h2
-            variants={itemVariants}
-            className="text-4xl md:text-5xl font-bold mb-6"
-          >
-            Ready to Transform Your Audit Future?
-          </motion.h2>
-          <motion.p
-            variants={itemVariants}
-            className="text-xl md:text-2xl mb-10 max-w-2xl mx-auto"
-          >
-            Join forces with Emirates Audit Group to elevate your internal controls, mitigate risks, and unlock operational excellence with cutting-edge solutions.
-          </motion.p>
-          <motion.div variants={itemVariants}>
-            <Link
-              to="/contact"
-              className="inline-block bg-white text-blue-600 font-semibold px-10 py-4 rounded-full hover:bg-gray-100 transition-colors duration-300 text-lg md:text-xl"
-            >
-              Request a Consultation
-            </Link>
           </motion.div>
         </div>
       </section>

@@ -1,16 +1,11 @@
-import { useEffect, useState } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
 import Tilt from 'react-parallax-tilt';
-import CountUp from 'react-countup';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import { FaBriefcase, FaStar, FaFilter, FaArrowRight, FaQuoteLeft } from 'react-icons/fa';
-import { Link } from 'react-router-dom';
+import { FaBuilding, FaUsers, FaRocket, FaPhone, FaWhatsapp, FaEnvelope, FaLinkedin } from 'react-icons/fa';
 
 function Careers() {
-  const [filter, setFilter] = useState('all');
-  const [selectedJob, setSelectedJob] = useState(null);
-
   useEffect(() => {
     AOS.init({
       duration: 1000,
@@ -19,54 +14,29 @@ function Careers() {
     });
   }, []);
 
-  const jobs = [
-    {
-      id: 1,
-      title: 'Senior Internal Auditor',
-      type: 'full-time',
-      location: 'Dubai, UAE',
-      description: 'Lead internal audits, assess risks, and ensure compliance with regulatory standards.',
-      requirements: ['5+ years in auditing', 'CPA or CIA certification', 'Strong analytical skills'],
-    },
-    {
-      id: 2,
-      title: 'Freelance VAT Consultant',
-      type: 'freelance',
-      location: 'Remote',
-      description: 'Provide expert VAT compliance and advisory services to clients across industries.',
-      requirements: ['3+ years in VAT consulting', 'Knowledge of UAE tax laws', 'Self-motivated'],
-    },
-    {
-      id: 3,
-      title: 'Audit Manager',
-      type: 'full-time',
-      location: 'Dubai, UAE',
-      description: 'Oversee audit teams, manage client relationships, and drive strategic initiatives.',
-      requirements: ['7+ years in audit management', 'Leadership experience', 'CPA or equivalent'],
-    },
-    {
-      id: 4,
-      title: 'Freelance IT Auditor',
-      type: 'freelance',
-      location: 'Remote',
-      description: 'Conduct IT audits to evaluate systems and ensure data security compliance.',
-      requirements: ['4+ years in IT auditing', 'CISA certification', 'Technical expertise'],
-    },
-  ];
-
-  const filteredJobs = filter === 'all' ? jobs : jobs.filter(job => job.type === filter);
-
   const benefits = [
-    { title: 'Professional Growth', description: 'Access to certifications and training programs.', icon: <FaStar /> },
-    { title: 'Flexible Work', description: 'Options for remote and freelance opportunities.', icon: <FaBriefcase /> },
-    { title: 'Collaborative Culture', description: 'Work with a dynamic, supportive team.', icon: <FaStar /> },
-    { title: 'Impactful Projects', description: 'Contribute to high-profile audits.', icon: <FaBriefcase /> },
+    { title: 'Professional Growth', description: 'Access to certifications and training programs.', icon: <FaBuilding /> },
+    { title: 'Flexible Work', description: 'Options for remote and freelance opportunities.', icon: <FaUsers /> },
+    { title: 'Collaborative Culture', description: 'Work with a dynamic, supportive team.', icon: <FaRocket /> },
+    { title: 'Impactful Projects', description: 'Contribute to high-profile audits.', icon: <FaBuilding /> },
   ];
 
-  const testimonials = [
-    { name: 'Sarah A.', role: 'Freelance Auditor', quote: 'Emirates Audit gave me the flexibility to work on exciting projects while growing my skills.' },
-    { name: 'John M.', role: 'Audit Manager', quote: 'The supportive culture and opportunities for growth are unmatched.' },
-    { name: 'Aisha K.', role: 'Internal Auditor', quote: 'I’ve worked on impactful projects that have advanced my career.' },
+  const whyChooseUs = [
+    {
+      title: 'Expertise Across Industries',
+      description: 'Our team’s extensive experience spans multiple sectors, delivering comprehensive and relevant audit solutions.',
+      icon: <FaBuilding />,
+    },
+    {
+      title: 'Tailored Solutions',
+      description: 'We craft customized audit strategies to address your unique challenges, ensuring impactful results.',
+      icon: <FaUsers />,
+    },
+    {
+      title: 'Advanced Technology',
+      description: 'Utilizing cutting-edge tools and analytics, we provide precise insights for strategic decision-making.',
+      icon: <FaRocket />,
+    },
   ];
 
   return (
@@ -96,13 +66,6 @@ function Careers() {
           <p className="text-base md:text-lg text-gray-100 mb-8 max-w-2xl mx-auto">
             Discover opportunities to grow, innovate, and make an impact with our world-class audit team.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.1, boxShadow: '0px 0px 20px rgba(255,255,255,0.6)' }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-white text-blue-600 px-8 py-3 rounded-full text-base font-semibold shadow-lg"
-          >
-            Explore Open Positions
-          </motion.button>
         </motion.div>
         <div className="absolute inset-0 pointer-events-none">
           <div className="particle particle-1"></div>
@@ -156,7 +119,46 @@ function Careers() {
         </div>
       </section>
 
-      {/* Job Listings Section */}
+      {/* Why Choose Us Section */}
+      <section className="py-24 bg-gray-100">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <motion.div
+            initial={{ opacity: 0, y: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.8 }}
+            className="text-center mb-16"
+          >
+            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
+              Why Choose Emirates Audit Group?
+            </h2>
+            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+              Join a team that values expertise, innovation, and tailored solutions.
+            </p>
+          </motion.div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+            {whyChooseUs.map((item, index) => (
+              <Tilt key={index}>
+                <motion.div
+                  data-aos="fade-up"
+                  data-aos-delay={index * 100}
+                  className="bg-white p-8 rounded-2xl shadow-lg text-center border border-blue-100 hover:shadow-xl transition-shadow duration-300 transform hover:-translate-y-2 card-glow"
+                >
+                  <div className="text-blue-600 text-4xl mx-auto mb-4">{item.icon}</div>
+                  <h3 className="text-xl md:text-2xl font-semibold text-gray-900 mb-3">
+                    {item.title}
+                  </h3>
+                  <p className="text-gray-600 text-base md:text-lg">
+                    {item.description}
+                  </p>
+                </motion.div>
+              </Tilt>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Contact Details Section */}
       <section className="py-24 bg-gradient-to-br from-gray-50 to-blue-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -164,246 +166,100 @@ function Careers() {
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.8 }}
-            className="text-center mb-12"
+            className="text-center mb-16"
           >
             <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
-              Current Openings
+              Contact Us
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Explore full-time and freelance opportunities with Emirates Audit Group.
+              Reach out to explore career opportunities with Emirates Audit Group.
             </p>
           </motion.div>
-          <div className="flex justify-center mb-8">
-            <div className="inline-flex bg-white rounded-full shadow-lg p-1">
-              <button
-                onClick={() => setFilter('all')}
-                className={`px-6 py-2 rounded-full ${filter === 'all' ? 'bg-blue-600 text-white' : 'text-gray-600'}`}
-              >
-                All
-              </button>
-              <button
-                onClick={() => setFilter('full-time')}
-                className={`px-6 py-2 rounded-full ${filter === 'full-time' ? 'bg-blue-600 text-white' : 'text-gray-600'}`}
-              >
-                Full-Time
-              </button>
-              <button
-                onClick={() => setFilter('freelance')}
-                className={`px-6 py-2 rounded-full ${filter === 'freelance' ? 'bg-blue-600 text-white' : 'text-gray-600'}`}
-              >
-                Freelance
-              </button>
-            </div>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredJobs.map((job, index) => (
-              <Tilt key={job.id}>
-                <motion.div
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="group bg-white/90 backdrop-blur-lg p-6 rounded-xl shadow-lg hover:bg-gradient-to-br hover:from-blue-600 hover:to-blue-400 transition-all duration-500 cursor-pointer card-glow"
-                  onClick={() => setSelectedJob(job)}
-                >
-                  <h3 className="text-xl font-semibold text-blue-600 group-hover:text-white mb-2">
-                    {job.title}
-                  </h3>
-                  <p className="text-gray-600 group-hover:text-white/90 mb-4">{job.location}</p>
-                  <p className="text-gray-500 group-hover:text-white/80 text-sm">{job.description}</p>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+            <motion.div
+              data-aos="fade-up"
+              className="bg-white p-6 rounded-xl shadow-lg text-center card-glow"
+            >
+              <a href="tel:+971589716588" target="_blank" rel="noopener noreferrer" aria-label="Call Us">
+                <div className="flex flex-col items-center">
                   <motion.div
                     whileHover={{ scale: 1.1 }}
-                    className="mt-4 flex items-center text-blue-600 group-hover:text-white"
+                    transition={{ duration: 0.3 }}
+                    className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-4"
                   >
-                    <span>Learn More</span>
-                    <FaArrowRight className="ml-2" />
+                    <FaPhone className="text-blue-600 text-2xl" />
                   </motion.div>
-                </motion.div>
-              </Tilt>
-            ))}
-          </div>
-        </div>
-        {/* Job Modal */}
-        <AnimatePresence>
-          {selectedJob && (
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              className="fixed inset-0 bg-black/50 flex items-center justify-center z-50"
-              onClick={() => setSelectedJob(null)}
-            >
-              <motion.div
-                initial={{ scale: 0.8, opacity: 0 }}
-                animate={{ scale: 1, opacity: 1 }}
-                exit={{ scale: 0.8, opacity: 0 }}
-                className="bg-white/95 backdrop-blur-lg p-8 rounded-xl max-w-lg w-full mx-4"
-                onClick={e => e.stopPropagation()}
-              >
-                <h3 className="text-2xl font-bold text-blue-600 mb-4">{selectedJob.title}</h3>
-                <p className="text-gray-600 mb-2"><strong>Location:</strong> {selectedJob.location}</p>
-                <p className="text-gray-600 mb-4"><strong>Type:</strong> {selectedJob.type}</p>
-                <p className="text-gray-600 mb-4">{selectedJob.description}</p>
-                <h4 className="text-lg font-semibold text-blue-600 mb-2">Requirements</h4>
-                <ul className="list-disc pl-5 text-gray-600 mb-6">
-                  {selectedJob.requirements.map((req, i) => (
-                    <li key={i}>{req}</li>
-                  ))}
-                </ul>
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="w-full bg-gradient-to-r from-blue-600 to-blue-400 text-white py-3 rounded-lg font-semibold"
-                  onClick={() => setSelectedJob(null)}
-                >
-                  Apply Now
-                </motion.button>
-              </motion.div>
+                  <h4 className="text-lg font-semibold text-blue-600 mb-2">Call Us</h4>
+                  <p className="text-gray-600">+971 589716588</p>
+                </div>
+              </a>
             </motion.div>
-          )}
-        </AnimatePresence>
-      </section>
-
-      {/* Stats Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
-          >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
-              Our Impact
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Join a team that’s making a difference in the auditing world.
-            </p>
-          </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <Tilt>
-              <motion.div
-                data-aos="fade-up"
-                className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-lg text-center"
-              >
-                <CountUp end={200} suffix="+" duration={2.5} className="text-4xl font-bold text-blue-600" />
-                <p className="text-gray-600 mt-2">Team Members</p>
-              </motion.div>
-            </Tilt>
-            <Tilt>
-              <motion.div
-                data-aos="fade-up"
-                data-aos-delay="100"
-                className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-lg text-center"
-              >
-                <CountUp end={500} suffix="+" duration={2.5} className="text-4xl font-bold text-blue-600" />
-                <p className="text-gray-600 mt-2">Projects Completed</p>
-              </motion.div>
-            </Tilt>
-            <Tilt>
-              <motion.div
-                data-aos="fade-up"
-                data-aos-delay="200"
-                className="bg-gradient-to-br from-white to-blue-50 p-8 rounded-xl shadow-lg text-center"
-              >
-                <CountUp end={95} suffix="%" duration={2.5} className="text-4xl font-bold text-blue-600" />
-                <p className="text-gray-600 mt-2">Employee Satisfaction</p>
-              </motion.div>
-            </Tilt>
-          </div>
-        </div>
-      </section>
-
-      {/* Freelancer Section */}
-      <section className="py-24 bg-gradient-to-br from-blue-50 to-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <motion.div
-              initial={{ opacity: 0, x: -50 }}
-              whileInView={{ opacity: 1, x: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.8 }}
-              className="space-y-6"
+              data-aos="fade-up"
+              data-aos-delay="100"
+              className="bg-white p-6 rounded-xl shadow-lg text-center card-glow"
             >
-              <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent">
-                Freelancers, Join Our Network
-              </h2>
-              <p className="text-xl text-gray-600">
-                Offer your auditing expertise on our platform. Enjoy flexible projects, competitive pay, and a supportive community.
-              </p>
-              <ul className="list-disc pl-5 text-gray-600 space-y-2">
-                <li>Work on diverse audit projects</li>
-                <li>Access professional development resources</li>
-                <li>Secure payment system</li>
-              </ul>
-              <Link to="/contact">
-                <motion.button
-                  whileHover={{ scale: 1.05 }}
-                  whileTap={{ scale: 0.95 }}
-                  className="bg-gradient-to-r from-blue-600 to-blue-400 text-white px-8 py-3 rounded-lg font-semibold"
-                >
-                  Apply as a Freelancer
-                </motion.button>
-              </Link>
+              <a href="https://wa.me/+971589716588" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <div className="flex flex-col items-center">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-4"
+                  >
+                    <FaWhatsapp className="text-green-500 text-2xl" />
+                  </motion.div>
+                  <h4 className="text-lg font-semibold text-blue-600 mb-2">WhatsApp</h4>
+                  <p className="text-gray-600">+971 589716588</p>
+                </div>
+              </a>
             </motion.div>
-            <Tilt>
-              <motion.div
-                initial={{ opacity: 0, x: 50 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.8 }}
-                className="relative"
-              >
-                <img
-                  src="https://images.unsplash.com/photo-1553877522-43269d82fc8e?auto=format&fit=crop&q=80&w=500"
-                  alt="Freelancer working"
-                  className="rounded-xl shadow-lg w-full h-[24rem] object-cover border-2 border-blue-100"
-                />
-              </motion.div>
-            </Tilt>
+            <motion.div
+              data-aos="fade-up"
+              data-aos-delay="200"
+              className="bg-white p-6 rounded-xl shadow-lg text-center card-glow"
+            >
+              <a href="mailto:emiratesauditgroup@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                <div className="flex flex-col items-center">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-4"
+                  >
+                    <FaEnvelope className="text-red-500 text-2xl" />
+                  </motion.div>
+                  <h4 className="text-lg font-semibold text-blue-600 mb-2">Email</h4>
+                  <p className="text-gray-600">emiratesauditgroup@gmail.com</p>
+                </div>
+              </a>
+            </motion.div>
+            <motion.div
+              data-aos="fade-up"
+              data-aos-delay="300"
+              className="bg-white p-6 rounded-xl shadow-lg text-center card-glow"
+            >
+              <a href="https://www.linkedin.com/company/emirates-audit-group" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <div className="flex flex-col items-center">
+                  <motion.div
+                    whileHover={{ scale: 1.1 }}
+                    transition={{ duration: 0.3 }}
+                    className="w-16 h-16 bg-blue-600/10 rounded-full flex items-center justify-center mb-4"
+                  >
+                    <FaLinkedin className="text-blue-700 text-2xl" />
+                  </motion.div>
+                  <h4 className="text-lg font-semibold text-blue-600 mb-2">LinkedIn</h4>
+                  <p className="text-gray-600">Emirates Audit Group</p>
+                </div>
+              </a>
+            </motion.div>
           </div>
-        </div>
-      </section>
-
-      {/* Testimonials Section */}
-      <section className="py-24 bg-white">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <motion.div
-            initial={{ opacity: 0, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="text-center mb-16"
+            data-aos="fade-up"
+            data-aos-delay="400"
+            className="mt-12 text-center"
           >
-            <h2 className="text-4xl md:text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
-              What Our Team Says
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Hear from our employees and freelancers about their experiences.
-            </p>
+            <h4 className="text-lg font-semibold text-blue-600 mb-2">Address</h4>
+            <p className="text-gray-600">Dubai, United Arab Emirates</p>
           </motion.div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {testimonials.map((testimonial, index) => (
-              <Tilt key={index}>
-                <motion.div
-                  data-aos="fade-up"
-                  data-aos-delay={index * 100}
-                  className="bg-white/80 backdrop-blur-lg p-6 rounded-xl shadow-lg card-glow"
-                >
-                  <FaQuoteLeft className="text-3xl text-blue-600 mb-4" />
-                  <p className="text-gray-600 mb-4">{testimonial.quote}</p>
-                  <div className="flex items-center">
-                    <div className="w-12 h-12 rounded-full bg-gradient-to-br from-blue-600/20 to-blue-400/20 flex items-center justify-center">
-                      <span className="text-xl font-bold text-blue-600">{testimonial.name[0]}</span>
-                    </div>
-                    <div className="ml-4">
-                      <p className="font-semibold text-blue-600">{testimonial.name}</p>
-                      <p className="text-gray-500 text-sm">{testimonial.role}</p>
-                    </div>
-                  </div>
-                </motion.div>
-              </Tilt>
-            ))}
-          </div>
         </div>
       </section>
 

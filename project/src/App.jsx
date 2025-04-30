@@ -9,6 +9,7 @@ import ITAudit from './pages/ITAudit';
 import Contact from './pages/Contact';
 import Careers from './pages/Career';
 import Services from './pages/Services';
+import AboutUs from './pages/AboutUs';
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path="/compliance-audit" element={<ComplianceAudit />} />
         <Route path="/it-audit" element={<ITAudit />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/about" element={<AboutUs />} />
         <Route path="/careers" element={<Careers />} />
       </Routes>
       <Footer />
