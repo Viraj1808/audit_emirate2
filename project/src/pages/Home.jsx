@@ -291,7 +291,7 @@ function Home() {
                   className="relative rounded-lg overflow-hidden shadow-2xl"
                 >
                   <img 
-                    src="https://images.unsplash.com/photo-1600880292203-757bb62b4baf?auto=format&fit=crop&q=80&w=800" 
+                    src="https://th.bing.com/th/id/OIP.yghLqrRzlMVvmtNzcrqqTgHaE8?w=223&h=180&c=7&r=0&o=5&pid=1.7" 
                     alt="Team meeting" 
                     className="w-full h-[500px] object-cover"
                   />
@@ -446,7 +446,7 @@ function Home() {
               transition={{ duration: 0.8 }}
               className="text-center mb-16"
             >
-              <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6">
+              <h2 className="text-5xl font-bold bg-gradient-to-r from-blue-600 to-blue-400 bg-clip-text text-transparent mb-6 " >
                 Get In Touch
               </h2>
               <p className="text-2xl text-gray-600 max-w-3xl mx-auto">

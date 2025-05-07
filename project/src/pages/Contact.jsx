@@ -189,6 +189,7 @@ const Contact = () => {
                     <option value="risk-assessment">Risk Assessment</option>
                     <option value="compliance-audit">Compliance Audit</option>
                     <option value="it-audit">IT Audit</option>
+                    <option value="other-query">Other Query</option>
                   </select>
                 </motion.div>
                 <motion.div whileHover={{ scale: 1.02 }}>
